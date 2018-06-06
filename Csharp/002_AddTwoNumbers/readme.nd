@@ -1,0 +1,27 @@
+public class Solution {
+    public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
+            double number = 0;
+            double pow = -1;
+
+            ListNode lTemp = l1;
+            while (lTemp != null) { pow++; lTemp = lTemp.next; }
+
+            for (int i=0; i <= pow; i++)
+            {
+                number += l1.val * Math.Pow(10.0, i) + l2.val * Math.Pow(10.0, i);
+                l1 = l1.next;
+                l2 = l2.next;
+            }
+            int[] digits = number.ToString().ToCharArray().Select(x => (int)Char.GetNumericValue(x)).ToArray();
+
+            ListNode answer = new ListNode(digits[digits.Length-1]);
+            ListNode lTemp2 = answer;
+            for (int i = digits.Length-2; i >=0; i--)
+            {
+                lTemp2.next = new ListNode(digits[i]);
+                lTemp2 = lTemp2.next;
+            }
+
+            return answer;
+    }
+}
