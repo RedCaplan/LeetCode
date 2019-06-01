@@ -25,5 +25,5 @@ public class Solution {
 }
 ```
 
-####Runtime: 40 ms, faster than 44.49% of C# online submissions for Valid Perfect Square.
-####Memory Usage: 12.5 MB, less than 100.00% of C# online submissions for Valid Perfect Square.
+#### Runtime: 40 ms, faster than 44.49% of C# online submissions for Valid Perfect Square.
+#### Memory Usage: 12.5 MB, less than 100.00% of C# online submissions for Valid Perfect Square.
